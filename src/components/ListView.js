@@ -2,15 +2,9 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 class ListView extends React.PureComponent {
-  constructor(props) {
-    console.log(props)
-    super(props)
-    Object.assign(this, props)
-  }
-
   render() {
     return <div>
-      {this.items.map(this.itemView)}
+      {this.props.items.map(this.props.itemView)}
     </div>
   }
 }
